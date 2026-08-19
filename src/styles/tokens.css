@@ -1,0 +1,146 @@
+/**
+ * PaperHub / PPMS design tokens
+ * Every colour, radius, shadow and spacing step used anywhere in the app is
+ * declared here, so the whole theme can be retuned from one file. The palette
+ * is taken from the UI screenshots in the project report: white and very light
+ * grey surfaces, a strong royal blue for primary actions, dark navy text, and
+ * green / amber / red status colours, with a dark navy admin sidebar.
+ */
+
+:root {
+  /*  Brand */
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb; /* primary */
+  --blue-700: #1d4ed8;
+  --blue-800: #1e40af;
+
+  --primary: var(--blue-600);
+  --primary-hover: var(--blue-700);
+  --primary-soft: var(--blue-50);
+  --primary-border: var(--blue-200);
+
+  /*  Neutrals */
+  --white: #ffffff;
+  --grey-50: #f8fafc;
+  --grey-100: #f1f5f9;
+  --grey-200: #e2e8f0;
+  --grey-300: #cbd5e1;
+  --grey-400: #94a3b8;
+  --grey-500: #64748b;
+  --grey-600: #475569;
+  --grey-700: #334155;
+  --grey-800: #1e293b;
+  --grey-900: #0f172a;
+
+  --surface: var(--white);
+  --surface-muted: var(--grey-50);
+  --page-bg: var(--grey-50);
+  --border: var(--grey-200);
+  --border-strong: var(--grey-300);
+
+  --text: var(--grey-900);
+  --text-muted: var(--grey-500);
+  --text-subtle: var(--grey-400);
+  --text-invert: var(--white);
+
+  /*  Status */
+  --success: #16a34a;
+  --success-soft: #dcfce7;
+  --success-border: #bbf7d0;
+  --success-text: #15803d;
+
+  --warning: #f59e0b;
+  --warning-soft: #fef3c7;
+  --warning-border: #fde68a;
+  --warning-text: #b45309;
+
+  --danger: #dc2626;
+  --danger-soft: #fee2e2;
+  --danger-border: #fecaca;
+  --danger-text: #b91c1c;
+
+  --info-soft: var(--blue-50);
+  --info-border: var(--blue-200);
+  --info-text: var(--blue-700);
+
+  /* Admin theme (dark navy moderation portal) */
+  --admin-sidebar-bg: #0f172a;
+  --admin-sidebar-bg-soft: #1e293b;
+  --admin-sidebar-border: #1e293b;
+  --admin-sidebar-text: #cbd5e1;
+  --admin-sidebar-muted: #64748b;
+  --admin-accent: #f59e0b;
+  --admin-accent-hover: #d97706;
+  --admin-banner-bg: #0f172a;
+
+  /*  Typography */
+  --font-sans: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "JetBrains Mono", "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+
+  --text-xs: 0.6875rem;   /* 11px - table headers, badges */
+  --text-sm: 0.8125rem;   /* 13px - table cells, labels */
+  --text-base: 0.875rem;  /* 14px - body */
+  --text-md: 0.9375rem;   /* 15px */
+  --text-lg: 1.125rem;    /* 18px - card titles */
+  --text-xl: 1.375rem;    /* 22px - page titles */
+  --text-2xl: 1.75rem;    /* 28px */
+  --text-3xl: 2.5rem;     /* 40px - hero */
+
+  --weight-normal: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Spacing (4px scale)*/
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+
+  /*  Radii */
+  --radius-sm: 5px;
+  --radius: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 999px;
+
+  /* Elevation (deliberately subtle - institutional, not flashy)*/
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+  --shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 6px 18px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.12);
+
+  --focus-ring: 0 0 0 3px rgba(37, 99, 235, 0.18);
+
+  /*  Layout */
+  --navbar-height: 62px;
+  --sidebar-width: 246px;
+  --container-max: 1200px;
+
+  /*  Motion (short and functional only)  */
+  --transition-fast: 120ms ease;
+  --transition: 160ms ease;
+}
+
+/* Respect a reduced-motion preference across the whole app. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
